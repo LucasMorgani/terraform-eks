@@ -6,7 +6,7 @@ resource "aws_vpc" "eks_vpc" {
   tags = merge(
     local.tags, # Passando as variaveis do locals, +...
     {
-      Name = "skylab-vpc"
+      Name = "${var.project_name}-vpc"
     }
   )
 }
